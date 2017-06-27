@@ -76,6 +76,7 @@
     <Compile Include="AutoFakeItEasy\AutoFakeItEasyDataAttribute.cs" />
     <Compile Include="AutoFakeItEasy\Customizations\CustomSpecimenBuildersCustomization.cs" />
     <Compile Include="AutoFakeItEasy\Customizations\DefaultCustomization.cs" />
+    <Compile Include="AutoFakeItEasy\SpecimenBuilders\FakeItEasyStrictSpecimenBuilder.cs" />
     <Compile Include="AutoFakeItEasy\InlineAutoFakeItEasyDataAttribute.cs" />
     <Compile Include="AutoFakeItEasy\SpecimenBuilders\Base\SpecimenBuilderBase.cs" />
     <Compile Include="AutoFakeItEasy\SpecimenBuilders\StreamSpecimenBuilder.cs" />

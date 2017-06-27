@@ -15,14 +15,25 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy
     public sealed class InlineAutoFakeItEasyDataAttribute : CompositeDataAttribute
     {
         /// <summary>
+        /// Initializes a new instance of the <see cref="InlineAutoFakeItEasyDataAttribute" /> class.
+        /// </summary>
+        /// <param name="useStrictFakes">if set to <c>true</c> [use strict fakes].</param>
+        /// <param name="values">The values.</param>
+        public InlineAutoFakeItEasyDataAttribute(bool useStrictFakes, params object[] values)
+            : base(new DataAttribute[]
+            {
+                new InlineDataAttribute(values),
+                new AutoFakeItEasyDataAttribute(useStrictFakes)
+            })
+        {
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="InlineAutoFakeItEasyDataAttribute"/> class.
         /// </summary>
         /// <param name="values">The values.</param>
         public InlineAutoFakeItEasyDataAttribute(params object[] values)
-            : base(new DataAttribute[]
-            {
-            new InlineDataAttribute(values), new AutoFakeItEasyDataAttribute()
-            })
+            : this(false, values)
         {
         }
     }
