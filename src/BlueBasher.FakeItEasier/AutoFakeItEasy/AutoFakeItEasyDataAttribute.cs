@@ -19,15 +19,15 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy
         /// <summary>
         /// Initializes a new instance of the <see cref="AutoFakeItEasyDataAttribute" /> class.
         /// </summary>
-        /// <param name="useStrictFakes">if set to <c>true</c> [use strict fakes].</param>
+        /// <param name="fakeCreationMode">The fake creation mode.</param>
         /// <remarks>
         /// This constructor overload initializes the <see cref="P:Ploeh.AutoFixture.Xunit.AutoDataAttribute.Fixture" /> to an instance of
         /// <see cref="P:Ploeh.AutoFixture.Xunit.AutoDataAttribute.Fixture" />.
         /// </remarks>
-        public AutoFakeItEasyDataAttribute(bool useStrictFakes)
+        public AutoFakeItEasyDataAttribute(FakeCreationMode fakeCreationMode)
             : base(new Fixture())
         {
-            if (useStrictFakes)
+            if (fakeCreationMode == FakeCreationMode.Strict)
             {
                 this.Fixture.Customize(new AutoFakeItEasyCustomization(new FakeItEasyStrictSpecimenBuilder()));
             }
@@ -47,17 +47,17 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy
         /// <see cref="P:Ploeh.AutoFixture.Xunit.AutoDataAttribute.Fixture" />.
         /// </remarks>
         public AutoFakeItEasyDataAttribute()
-            : this(false)
+            : this(FakeCreationMode.Loose)
         {
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AutoFakeItEasyDataAttribute" /> class.
         /// </summary>
-        /// <param name="useStrictFakes">if set to <c>true</c> [use strict fakes].</param>
+        /// <param name="fakeCreationMode">The fake creation mode.</param>
         /// <param name="specimenBuilders">The specimen builders.</param>
-        public AutoFakeItEasyDataAttribute(bool useStrictFakes, params Type[] specimenBuilders)
-            : this(useStrictFakes)
+        public AutoFakeItEasyDataAttribute(FakeCreationMode fakeCreationMode, params Type[] specimenBuilders)
+            : this(fakeCreationMode)
         {
             this.Fixture.Customize(new CustomSpecimenBuildersCustomization(specimenBuilders));
         }
@@ -67,7 +67,7 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy
         /// </summary>
         /// <param name="specimenBuilders">The specimen builders.</param>
         public AutoFakeItEasyDataAttribute(params Type[] specimenBuilders)
-            : this(false, specimenBuilders)
+            : this(FakeCreationMode.Loose, specimenBuilders)
         {
         }
     }

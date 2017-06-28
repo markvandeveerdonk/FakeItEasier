@@ -17,13 +17,13 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineAutoFakeItEasyDataAttribute" /> class.
         /// </summary>
-        /// <param name="useStrictFakes">if set to <c>true</c> [use strict fakes].</param>
+        /// <param name="fakeCreationMode">The fake creation mode.</param>
         /// <param name="values">The values.</param>
-        public InlineAutoFakeItEasyDataAttribute(bool useStrictFakes, params object[] values)
+        public InlineAutoFakeItEasyDataAttribute(FakeCreationMode fakeCreationMode, params object[] values)
             : base(new DataAttribute[]
             {
                 new InlineDataAttribute(values),
-                new AutoFakeItEasyDataAttribute(useStrictFakes)
+                new AutoFakeItEasyDataAttribute(fakeCreationMode)
             })
         {
         }
@@ -33,7 +33,7 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy
         /// </summary>
         /// <param name="values">The values.</param>
         public InlineAutoFakeItEasyDataAttribute(params object[] values)
-            : this(false, values)
+            : this(FakeCreationMode.Loose, values)
         {
         }
     }
