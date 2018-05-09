@@ -4,8 +4,8 @@
 
 namespace BlueBasher.FakeItEasier.AutoFakeItEasy.Customizations
 {
+    using AutoFixture;
     using BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders;
-    using Ploeh.AutoFixture;
 
     /// <summary>
     /// Adds the default customizations

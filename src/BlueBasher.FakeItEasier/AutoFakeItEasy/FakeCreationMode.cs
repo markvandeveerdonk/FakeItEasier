@@ -1,4 +1,4 @@
-﻿// <copyright file="FakesMode.cs" company="BlueBasher">
+﻿// <copyright file="FakeCreationMode.cs" company="BlueBasher">
 // Copyright (c) BlueBasher. All rights reserved.
 // </copyright>
 

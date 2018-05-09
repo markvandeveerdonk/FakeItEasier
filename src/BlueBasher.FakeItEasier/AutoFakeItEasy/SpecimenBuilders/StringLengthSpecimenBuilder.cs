@@ -7,8 +7,8 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.Linq;
+    using AutoFixture.Kernel;
     using Base;
-    using Ploeh.AutoFixture.Kernel;
 
     /// <summary>
     /// SpecimenBuilder that creates a <see cref="string"/> taking an optional <see cref="StringLengthAttribute"/> in account.
@@ -21,7 +21,7 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders
         /// <param name="request">The request that describes what to create.</param>
         /// <param name="context">A context that can be used to create other specimens.</param>
         /// <returns>
-        /// The requested specimen if possible; otherwise a <see cref="T:Ploeh.AutoFixture.Kernel.NoSpecimen" /> instance.
+        /// The requested specimen if possible; otherwise a <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance.
         /// </returns>
         /// <exception cref="System.ArgumentNullException">context</exception>
         /// <remarks>
@@ -31,7 +31,7 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders
         ///   </para>
         ///   <para>
         /// Note to implementers: Implementations are expected to return a
-        ///   <see cref="T:Ploeh.AutoFixture.Kernel.NoSpecimen" /> instance if they can't satisfy the request.
+        ///   <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance if they can't satisfy the request.
         ///   </para>
         /// </remarks>
         public override object Create(object request, ISpecimenContext context)

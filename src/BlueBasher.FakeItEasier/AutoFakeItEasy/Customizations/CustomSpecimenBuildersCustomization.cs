@@ -6,9 +6,9 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy.Customizations
 {
     using System;
     using System.Linq;
+    using AutoFixture;
+    using AutoFixture.Kernel;
     using BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders;
-    using Ploeh.AutoFixture;
-    using Ploeh.AutoFixture.Kernel;
 
     /// <summary>
     /// Adds custom SpecimenBuilders

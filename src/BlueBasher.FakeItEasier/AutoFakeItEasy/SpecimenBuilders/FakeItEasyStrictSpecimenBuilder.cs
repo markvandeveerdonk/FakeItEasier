@@ -6,8 +6,8 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders
 {
     using System;
     using System.Reflection;
+    using AutoFixture.Kernel;
     using FakeItEasy;
-    using Ploeh.AutoFixture.Kernel;
 
     /// <summary>
     /// Specimen builder that creates strict fakes
@@ -20,7 +20,7 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders
         /// <param name="request">The request that describes what to create.</param>
         /// <param name="context">A context that can be used to create other specimens.</param>
         /// <returns>
-        /// The requested specimen if possible; otherwise a <see cref="T:Ploeh.AutoFixture.Kernel.NoSpecimen" /> instance.
+        /// The requested specimen if possible; otherwise a <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance.
         /// </returns>
         /// <exception cref="ArgumentNullException">context</exception>
         /// <remarks>
@@ -30,7 +30,7 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders
         /// </para>
         /// <para>
         /// Note to implementers: Implementations are expected to return a
-        /// <see cref="T:Ploeh.AutoFixture.Kernel.NoSpecimen" /> instance if they can't satisfy the request.
+        /// <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance if they can't satisfy the request.
         /// </para>
         /// </remarks>
         public object Create(object request, ISpecimenContext context)

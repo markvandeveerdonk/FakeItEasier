@@ -8,7 +8,7 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.Base
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
-    using Ploeh.AutoFixture.Kernel;
+    using AutoFixture.Kernel;
 
     /// <summary>
     /// Base class for all <see cref="ISpecimenBuilder"/>
@@ -21,7 +21,7 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.Base
         /// <param name="request">The request that describes what to create.</param>
         /// <param name="context">A context that can be used to create other specimens.</param>
         /// <returns>
-        /// The requested specimen if possible; otherwise a <see cref="T:Ploeh.AutoFixture.Kernel.NoSpecimen" /> instance.
+        /// The requested specimen if possible; otherwise a <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance.
         /// </returns>
         /// <remarks>
         /// <para>
@@ -30,7 +30,7 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.Base
         /// </para>
         /// <para>
         /// Note to implementers: Implementations are expected to return a
-        /// <see cref="T:Ploeh.AutoFixture.Kernel.NoSpecimen" /> instance if they can't satisfy the request.
+        /// <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance if they can't satisfy the request.
         /// </para>
         /// </remarks>
         public virtual object Create(object request, ISpecimenContext context)

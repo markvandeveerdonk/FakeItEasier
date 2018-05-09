@@ -4,7 +4,7 @@
 
 namespace BlueBasher.FakeItEasier.AutoFakeItEasy
 {
-    using Ploeh.AutoFixture.Xunit2;
+    using AutoFixture.Xunit2;
     using Xunit;
     using Xunit.Sdk;
 
