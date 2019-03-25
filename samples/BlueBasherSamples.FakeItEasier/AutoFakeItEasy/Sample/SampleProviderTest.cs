@@ -33,7 +33,7 @@ namespace BlueBasherSamples.FakeItEasier.AutoFakeItEasy.Sample
 
             // Assert
             A.CallTo(() => sampleService.Execute())
-                .MustHaveHappened(Repeated.Exactly.Once);
+                .MustHaveHappenedOnceExactly();
         }
 
         /// <summary>
@@ -61,7 +61,7 @@ namespace BlueBasherSamples.FakeItEasier.AutoFakeItEasy.Sample
 
             // Assert
             A.CallTo(() => sampleService.ExecuteWithParam(A<string>.Ignored))
-                .MustHaveHappened(Repeated.Exactly.Once);
+                .MustHaveHappenedOnceExactly();
             Assert.Equal(returnValue, actual);
         }
 
@@ -93,10 +93,7 @@ namespace BlueBasherSamples.FakeItEasier.AutoFakeItEasy.Sample
 
             // Assert
             A.CallTo(() => sampleService.ExecuteWithParam(A<string>.Ignored))
-                .MustHaveHappened(
-                    canExecute
-                    ? Repeated.Exactly.Once
-                    : Repeated.Never);
+                .MustHaveHappenedANumberOfTimesMatching(n => n == (canExecute ? 1 : 0));
             Assert.Equal(returnValue, actual);
         }
 
@@ -125,7 +122,7 @@ namespace BlueBasherSamples.FakeItEasier.AutoFakeItEasy.Sample
 
             // Assert
             A.CallTo(() => sampleService.ExecuteWithDto(A<SampleDto>.Ignored))
-                .MustHaveHappened(Repeated.Exactly.Once);
+                .MustHaveHappenedOnceExactly();
             Assert.Equal(returnValue, actual);
         }
 
@@ -157,10 +154,7 @@ namespace BlueBasherSamples.FakeItEasier.AutoFakeItEasy.Sample
 
             // Assert
             A.CallTo(() => sampleService.ExecuteWithDto(A<SampleDto>.Ignored))
-                .MustHaveHappened(
-                    canExecute
-                    ? Repeated.Exactly.Once
-                    : Repeated.Never);
+                .MustHaveHappenedANumberOfTimesMatching(n => n == (canExecute ? 1 : 0));
             Assert.Equal(returnValue, actual);
         }
     }

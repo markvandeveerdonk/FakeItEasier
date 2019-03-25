@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlueBasher.FakeItEasier", "src\BlueBasher.FakeItEasier\BlueBasher.FakeItEasier.csproj", "{04AAE39C-8793-42C5-B17E-3AEFA3C1FCDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlueBasher.FakeItEasier", "src\BlueBasher.FakeItEasier\BlueBasher.FakeItEasier.csproj", "{04AAE39C-8793-42C5-B17E-3AEFA3C1FCDD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{497A2CEE-688D-4D68-8226-054D2F71CB57}"
 EndProject
@@ -32,5 +32,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{04AAE39C-8793-42C5-B17E-3AEFA3C1FCDD} = {497A2CEE-688D-4D68-8226-054D2F71CB57}
 		{640A1AA7-D4CE-47D4-B612-950B3B87D815} = {F74B3219-3EA6-4540-9AC5-D67D8FBBE2EB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BABBE9C-838B-4E21-BFDC-ED9A4BD08229}
 	EndGlobalSection
 EndGlobal

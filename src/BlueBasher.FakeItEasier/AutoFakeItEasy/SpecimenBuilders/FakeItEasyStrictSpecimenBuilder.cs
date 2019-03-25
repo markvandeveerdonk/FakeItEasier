@@ -69,6 +69,7 @@ namespace BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders
         }
 
         private T CreateStrictFake<T>()
+            where T : class
         {
             return A.Fake<T>(s => s.Strict());
         }

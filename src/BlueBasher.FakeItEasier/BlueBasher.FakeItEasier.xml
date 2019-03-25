@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BlueBasher.FakeItEasier</name>
+    </assembly>
+    <members>
+        <member name="T:BlueBasher.FakeItEasier.Assert.AssertAsync">
+            <summary>
+            Asynchronous assertions
+            </summary>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.Assert.AssertAsync.Throws``1(System.Func{System.Threading.Tasks.Task})">
+            <summary>
+            Assert wheter a certain <see cref="T:System.Exception"/> gets thrown
+            </summary>
+            <typeparam name="TException">The type of the exception.</typeparam>
+            <param name="func">The function.</param>
+            <returns>The exception</returns>
+        </member>
+        <member name="T:BlueBasher.FakeItEasier.AutoFakeItEasy.AutoFakeItEasyDataAttribute">
+            <summary>
+            Attribute for having faked method parameters.
+            </summary>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.AutoFakeItEasyDataAttribute.#ctor(BlueBasher.FakeItEasier.AutoFakeItEasy.FakeCreationMode)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.AutoFakeItEasyDataAttribute" /> class.
+            </summary>
+            <param name="fakeCreationMode">The fake creation mode.</param>
+            <remarks>
+            This constructor overload initializes the <see cref="P:AutoFixture.Xunit.AutoDataAttribute.Fixture" /> to an instance of
+            <see cref="P:AutoFixture.Xunit.AutoDataAttribute.Fixture" />.
+            </remarks>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.AutoFakeItEasyDataAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.AutoFakeItEasyDataAttribute" /> class.
+            </summary>
+            <remarks>
+            This constructor overload initializes the <see cref="P:AutoFixture.Xunit.AutoDataAttribute.Fixture" /> to an instance of
+            <see cref="P:AutoFixture.Xunit.AutoDataAttribute.Fixture" />.
+            </remarks>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.AutoFakeItEasyDataAttribute.#ctor(BlueBasher.FakeItEasier.AutoFakeItEasy.FakeCreationMode,System.Type[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.AutoFakeItEasyDataAttribute" /> class.
+            </summary>
+            <param name="fakeCreationMode">The fake creation mode.</param>
+            <param name="specimenBuilders">The specimen builders.</param>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.AutoFakeItEasyDataAttribute.#ctor(System.Type[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.AutoFakeItEasyDataAttribute"/> class.
+            </summary>
+            <param name="specimenBuilders">The specimen builders.</param>
+        </member>
+        <member name="T:BlueBasher.FakeItEasier.AutoFakeItEasy.Customizations.CustomSpecimenBuildersCustomization">
+            <summary>
+            Adds custom SpecimenBuilders
+            </summary>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.Customizations.CustomSpecimenBuildersCustomization.#ctor(System.Type[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.Customizations.CustomSpecimenBuildersCustomization"/> class.
+            </summary>
+            <param name="specimenBuilders">The custom specimen builders.</param>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.Customizations.CustomSpecimenBuildersCustomization.Customize(AutoFixture.IFixture)">
+            <summary>
+            Adds the custom customization.
+            These include :
+            <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.StringLengthSpecimenBuilder"/>
+            <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.StreamSpecimenBuilder"/>
+            </summary>
+            <param name="fixture">The fixture to customize.</param>
+        </member>
+        <member name="T:BlueBasher.FakeItEasier.AutoFakeItEasy.Customizations.DefaultCustomization">
+            <summary>
+            Adds the default customizations
+            </summary>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.Customizations.DefaultCustomization.Customize(AutoFixture.IFixture)">
+            <summary>
+            Adds the default customization.
+            These include :
+            <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.StringLengthSpecimenBuilder"/>
+            <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.StreamSpecimenBuilder"/>
+            </summary>
+            <param name="fixture">The fixture to customize.</param>
+        </member>
+        <member name="T:BlueBasher.FakeItEasier.AutoFakeItEasy.FakeCreationMode">
+            <summary>
+            The type of fakes to create
+            See https://fakeiteasy.readthedocs.io/en/stable/strict-fakes/
+            </summary>
+        </member>
+        <member name="F:BlueBasher.FakeItEasier.AutoFakeItEasy.FakeCreationMode.Loose">
+            <summary>
+            Create 'loose mocking' fakes
+            </summary>
+        </member>
+        <member name="F:BlueBasher.FakeItEasier.AutoFakeItEasy.FakeCreationMode.Strict">
+            <summary>
+            Create strict fakes
+            </summary>
+        </member>
+        <member name="T:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute">
+            <summary>
+            Method for having inline method parameters.
+            Remainder parameters that are not supplied will be automatically faked.
+            </summary>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute.#ctor(BlueBasher.FakeItEasier.AutoFakeItEasy.FakeCreationMode,System.Type,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute" /> class.
+            </summary>
+            <param name="fakeCreationMode">The fake creation mode.</param>
+            <param name="specimenBuilder1">The specimen builder1.</param>
+            <param name="values">The values.</param>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute.#ctor(BlueBasher.FakeItEasier.AutoFakeItEasy.FakeCreationMode,System.Type,System.Type,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute" /> class.
+            </summary>
+            <param name="fakeCreationMode">The fake creation mode.</param>
+            <param name="specimenBuilder1">The specimen builder1.</param>
+            <param name="specimenBuilder2">The specimen builder2.</param>
+            <param name="values">The values.</param>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute.#ctor(BlueBasher.FakeItEasier.AutoFakeItEasy.FakeCreationMode,System.Type,System.Type,System.Type,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute" /> class.
+            </summary>
+            <param name="fakeCreationMode">The fake creation mode.</param>
+            <param name="specimenBuilder1">The specimen builder1.</param>
+            <param name="specimenBuilder2">The specimen builder2.</param>
+            <param name="specimenBuilder3">The specimen builder3.</param>
+            <param name="values">The values.</param>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute.#ctor(BlueBasher.FakeItEasier.AutoFakeItEasy.FakeCreationMode,System.Type,System.Type,System.Type,System.Type,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute" /> class.
+            </summary>
+            <param name="fakeCreationMode">The fake creation mode.</param>
+            <param name="specimenBuilder1">The specimen builder1.</param>
+            <param name="specimenBuilder2">The specimen builder2.</param>
+            <param name="specimenBuilder3">The specimen builder3.</param>
+            <param name="specimenBuilder4">The specimen builder4.</param>
+            <param name="values">The values.</param>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute.#ctor(BlueBasher.FakeItEasier.AutoFakeItEasy.FakeCreationMode,System.Type,System.Type,System.Type,System.Type,System.Type,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute" /> class.
+            </summary>
+            <param name="fakeCreationMode">The fake creation mode.</param>
+            <param name="specimenBuilder1">The specimen builder1.</param>
+            <param name="specimenBuilder2">The specimen builder2.</param>
+            <param name="specimenBuilder3">The specimen builder3.</param>
+            <param name="specimenBuilder4">The specimen builder4.</param>
+            <param name="specimenBuilder5">The specimen builder5.</param>
+            <param name="values">The values.</param>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute.#ctor(BlueBasher.FakeItEasier.AutoFakeItEasy.FakeCreationMode,System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute" /> class.
+            </summary>
+            <param name="fakeCreationMode">The fake creation mode.</param>
+            <param name="values">The values.</param>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute.#ctor(System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:BlueBasher.FakeItEasier.AutoFakeItEasy.InlineAutoFakeItEasyDataAttribute"/> class.
+            </summary>
+            <param name="values">The values.</param>
+        </member>
+        <member name="T:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.Base.SpecimenBuilderBase">
+            <summary>
+            Base class for all <see cref="T:AutoFixture.Kernel.ISpecimenBuilder"/>
+            </summary>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.Base.SpecimenBuilderBase.Create(System.Object,AutoFixture.Kernel.ISpecimenContext)">
+            <summary>
+            Creates a new specimen based on a request.
+            </summary>
+            <param name="request">The request that describes what to create.</param>
+            <param name="context">A context that can be used to create other specimens.</param>
+            <returns>
+            The requested specimen if possible; otherwise a <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance.
+            </returns>
+            <remarks>
+            <para>
+            The <paramref name="request" /> can be any object, but will often be a
+            <see cref="T:System.Type" /> or other <see cref="T:System.Reflection.MemberInfo" /> instances.
+            </para>
+            <para>
+            Note to implementers: Implementations are expected to return a
+            <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance if they can't satisfy the request.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.Base.SpecimenBuilderBase.GetRequestName(System.Object)">
+            <summary>
+            Gets the name of the request using the <see cref="T:System.Reflection.PropertyInfo"/> or <see cref="T:System.Reflection.ParameterInfo"/>.
+            </summary>
+            <param name="request">The request.</param>
+            <returns>The request name</returns>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.Base.SpecimenBuilderBase.IsRequestForType(System.Object,System.Type)">
+            <summary>
+            Determines whether the request is for the given type.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="type">The type.</param>
+            <returns>Boolean indicating if the request is for this type.</returns>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.Base.SpecimenBuilderBase.GetCustomAttributeData``1(System.Object)">
+            <summary>
+            Gets the custom attribute data.
+            </summary>
+            <typeparam name="T">The Attribute to check for.</typeparam>
+            <param name="request">The request.</param>
+            <returns>A list of CustomAttributes</returns>
+        </member>
+        <member name="T:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.FakeItEasyStrictSpecimenBuilder">
+            <summary>
+            Specimen builder that creates strict fakes
+            </summary>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.FakeItEasyStrictSpecimenBuilder.Create(System.Object,AutoFixture.Kernel.ISpecimenContext)">
+            <summary>
+            Creates a new specimen based on a request.
+            </summary>
+            <param name="request">The request that describes what to create.</param>
+            <param name="context">A context that can be used to create other specimens.</param>
+            <returns>
+            The requested specimen if possible; otherwise a <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">context</exception>
+            <remarks>
+            <para>
+            The <paramref name="request" /> can be any object, but will often be a
+            <see cref="T:System.Type" /> or other <see cref="T:System.Reflection.MemberInfo" /> instances.
+            </para>
+            <para>
+            Note to implementers: Implementations are expected to return a
+            <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance if they can't satisfy the request.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.FakeItEasyStrictSpecimenBuilder.IsSatisfiedBy(System.Object)">
+            <summary>
+            Determines whether [is satisfied by] [the specified request].
+            </summary>
+            <param name="request">The request.</param>
+            <returns>
+              <c>true</c> if [is satisfied by] [the specified request]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.StreamSpecimenBuilder">
+            <summary>
+            SpecimenBuilder that ignores the virtual members
+            </summary>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.StreamSpecimenBuilder.Create(System.Object,AutoFixture.Kernel.ISpecimenContext)">
+            <summary>
+            Creates a new <see cref="T:System.IO.Stream"/> specimen based on a request.
+            </summary>
+            <param name="request">The request that describes what to create.</param>
+            <param name="context">A context that can be used to create other specimens.</param>
+            <returns>
+            The requested specimen if possible; otherwise a <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">context</exception>
+            <remarks>
+              <para>
+            The <paramref name="request" /> can be any object, but will often be a
+              <see cref="T:System.Type" /> or other <see cref="T:System.Reflection.MemberInfo" /> instances.
+              </para>
+              <para>
+            Note to implementers: Implementations are expected to return a
+              <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance if they can't satisfy the request.
+              </para>
+            </remarks>
+        </member>
+        <member name="T:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.StringLengthSpecimenBuilder">
+            <summary>
+            SpecimenBuilder that creates a <see cref="T:System.String"/> taking an optional <see cref="T:System.ComponentModel.DataAnnotations.StringLengthAttribute"/> in account.
+            </summary>
+        </member>
+        <member name="M:BlueBasher.FakeItEasier.AutoFakeItEasy.SpecimenBuilders.StringLengthSpecimenBuilder.Create(System.Object,AutoFixture.Kernel.ISpecimenContext)">
+            <summary>
+            Creates a new <see cref="T:System.String"/> specimen based on a request.
+            </summary>
+            <param name="request">The request that describes what to create.</param>
+            <param name="context">A context that can be used to create other specimens.</param>
+            <returns>
+            The requested specimen if possible; otherwise a <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">context</exception>
+            <remarks>
+              <para>
+            The <paramref name="request" /> can be any object, but will often be a
+              <see cref="T:System.Type" /> or other <see cref="T:System.Reflection.MemberInfo" /> instances.
+              </para>
+              <para>
+            Note to implementers: Implementations are expected to return a
+              <see cref="T:AutoFixture.Kernel.NoSpecimen" /> instance if they can't satisfy the request.
+              </para>
+            </remarks>
+        </member>
+    </members>
+</doc>
